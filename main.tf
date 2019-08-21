@@ -41,6 +41,7 @@ module "windows-client" {
   active_directory_password = "${var.admin_password}"
   admin_username            = "${var.admin_username}"
   admin_password            = "${var.admin_password}"
+  virtual_machine_name          = "${var.virtual_machine_name}"
 }
 
 output "windows_client_public_ip" {
