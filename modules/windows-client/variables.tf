@@ -1,3 +1,7 @@
+variable "virtual_machine_name" {
+  description = "The name of the Resource Group where the Windows Client resources will be created"
+}
+
 variable "resource_group_name" {
   description = "The name of the Resource Group where the Windows Client resources will be created"
 }
