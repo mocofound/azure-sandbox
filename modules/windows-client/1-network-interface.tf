@@ -9,7 +9,7 @@ resource "azurerm_network_interface" "primary" {
   name                    = "${var.prefix}-client-nic"
   location                = "${var.location}"
   resource_group_name     = "${var.resource_group_name}"
-  internal_dns_name_label = "${local.virtual_machine_name}"
+  internal_dns_name_label = "${var.virtual_machine_name}"
 
   ip_configuration {
     name                          = "primary"
