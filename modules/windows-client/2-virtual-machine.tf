@@ -1,9 +1,9 @@
-locals {
-  virtual_machine_name = "${var.prefix}-client"
-}
+#locals {
+#  virtual_machine_name = "${var.prefix}-client"
+#}
 
 resource "azurerm_virtual_machine" "client" {
-  name                          = "${local.virtual_machine_name}"
+  name                          = "${var.virtual_machine_name}-client"
   location                      = "${var.location}"
   resource_group_name           = "${var.resource_group_name}"
   network_interface_ids         = ["${azurerm_network_interface.primary.id}"]
@@ -18,14 +18,14 @@ resource "azurerm_virtual_machine" "client" {
   }
 
   storage_os_disk {
-    name              = "${local.virtual_machine_name}-disk1"
+    name              = "${var.virtual_machine_name}-disk1"
     caching           = "ReadWrite"
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
   }
 
   os_profile {
-    computer_name  = "${local.virtual_machine_name}"
+    computer_name  = "${var.virtual_machine_name}"
     admin_username = "${var.admin_username}"
     admin_password = "${var.admin_password}"
   }
