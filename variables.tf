@@ -9,3 +9,7 @@ variable "admin_username" {
 variable "admin_password" {
   description = "The password of the administrator account for both the local accounts, and Active Directory accounts. Needs to comply with the Windows Password Policy. Example: `PassW0rd1234!`"
 }
+
+variable "virtual_machine_name" {
+  description = "The name of the VM"
+}
