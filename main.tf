@@ -6,7 +6,7 @@ locals {
   resource_group_name = "${var.prefix}-resources"
 }
 
-resource "azurerm_resource_group" "test" {
+resource "azurerm_resource_group" "test2" {
   name     = "${local.resource_group_name}"
   location = "West Europe"
 }
